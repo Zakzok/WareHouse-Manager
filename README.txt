@@ -1,4 +1,5 @@
-The model is fully explained in the paper. We trust that the comments in any ready-made 
+The model is fully explained in the paper. There are 9 premade problem files, as
+described in the paper. We trust that the comments in any ready-made 
 problem file will guide you to creat your own problem files.
 
 To run what we call the 'default' enhsp-2020, use the following command, replacing 
