@@ -1,41 +1,11 @@
-THE MODEL----------------------------------------------------------
-We have some distributer warehouses and one or more 'master' warehouses.
-The master warehouse must be stocked up of all items initially, and
-our goal is stock up certain warehouses with certain items. This 
-simulates a single run of stocking up items around our distributor
-warehouses.
+The model is fully explained in the paper. We trust that the comments in any ready-made 
+problem file will guide you to creat your own problem files.
 
-Please note that you will need to run this using prppp.
+To run what we call the 'default' enhsp-2020, use the following command, replacing 
+problem.pddl with whatever problem you wish to test:
 
-Here are the bullet points of our current model:
+enhsp-2020 --domain domain.pddl --problem problem.pddl
 
--Our network of warehouses is connected by roads.
+To run what we call short-sited enhsp-2020, use the following command in a similar way:
 
--We have vehicles that are able to move along the roads between
-warehouses.
-
--Vehicles can be loaded and unloaded with any specific one item.
-
--Each action (drive(3),(loader(1),unloader(1)) has a specified
-cost associated with it.
-
--Ours goal is to achieve the goal state of stocking up items in specific
-warehouses while minimizing the total cost.
-
--Note that once a warehouse has stock of an item, it has infinitely
-much of it. This is infact intended as we want the planner to move
-item stock between distributors. Once we are able to implement 
-'numerical' values for specific stocks, we will be splitting the items
-when they are being transpored.
-
-TESTING-------------------------------------------------------------
-
--You must create a network of warehouses connected by roads. Roads
-are recommended to be two-way.
-
--You must create a set of vehicles, and must initialize each vehicle
-correctly by placing it in a specific warehouse and specifying whether
-it is loaded or if it is empty.
-
--You must specify in the goal state which distributer warehouses must
-have stock of a specific item
+enhsp-2020 --domain domain.pddl --problem problem.pddl -ha true -h hmrp -wh 4
